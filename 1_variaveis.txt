@@ -1,42 +1,85 @@
--- VARIÁVEIS E TIPOS PRIMITIVOS --
+📘 VARIÁVEIS E TIPOS PRIMITIVOS — JavaScript
 
-° COMENTÁRIOS: // Uma unica linha.ou /*
-    Mais de
-    uma linha.
-   */
+📝 COMENTÁRIOS
+- Comentário de uma linha:
+  // Isso é um comentário
 
- ° Um sinal de igual(=) significa RECEBE.
+- Comentário de várias linhas:
+  /*
+    Isso é um comentário
+    com mais de uma linha
+  */
 
- °  vaga a1 = carro1
-         a1 = carro2
-         a1 = null("Valor nulo")
+➡️ OPERADOR DE ATRIBUIÇÃO
+- O sinal de igual (=) significa RECEBE, e não igualdade.
 
- ° Variáveis: Espaços na memória do computador em JavaScript, se atribui uma Variável com a palavra ("var"), também podemos usar a palavra ("let").
-       Exemplo:  var n1 = 5
-                 var n2 = 8.5
-                 var n3 = 15
+Exemplo:
+  var a1 = carro1
+  a1 = carro2
+  a1 = null // valor nulo
 
- . Pode ter Variáveis de tamanhos diferentes para caber dados de tamanhos diferentes.
-        Exemplo: var s1 = "JavaScript"
-                 var s2 = 'Curso em Vídeo'
-                 var s3 = `Guanabara`
+📦 VARIÁVEIS
+- Variáveis são espaços na memória do computador usados para guardar dados.
+- Em JavaScript, podemos declarar variáveis usando:
+  - var (forma mais antiga)
+  - let (forma mais moderna e recomendada)
 
- . O nome de cada Variável se chama de "Identificador", existe regras para nomeação.
-  - 1: Podem começar com LETRA, $, _
-  - 2: Não podem começar com números.
-  - 3: É possível usar letras ou números.
-  - 4: É possível usar acentos e símbulos.
-  - 5: Não pode ter espaços.
-  - 6: Não podem ser palavras reservadas.
+Exemplos:
+  var n1 = 5
+  let n2 = 8.5
+  let n3 = 15
 
-  DICAS PARA IDENTIFICADOR:
-  - 1: Maiusculas e minusculas fazem diferença.
-  - 2: Nomes coerentes de acordo com os problemas.
+🔤 STRINGS (TEXTOS)
+- Textos podem ser declarados com:
+  - Aspas duplas " "
+  - Aspas simples ' '
+  - Crases ` ` (template strings)
 
-  * Variáveis serve para guardar dados de diferentes tipos.
-  - number - Infinity     NaN
-  - string
-  - boolean
-  - Object - Array    
+Exemplo:
+  let s1 = "JavaScript"
+  let s2 = 'Curso em Vídeo'
+  let s3 = `Guanabara`
 
-= Para saber esses tipos usa-se comando ("typeof").
+🏷️ IDENTIFICADORES (NOME DAS VARIÁVEIS)
+
+Regras:
+1. Podem começar com letra, $ ou _
+2. Não podem começar com números
+3. Podem conter letras e números
+4. Não podem conter espaços
+5. Não podem ser palavras reservadas da linguagem
+
+Observação:
+- Acentos e símbolos são permitidos, mas não recomendados na prática profissional.
+
+DICAS PARA BONS IDENTIFICADORES
+- JavaScript diferencia maiúsculas e minúsculas
+- Use nomes claros e coerentes com o problema
+
+Exemplo:
+  let idadeAluno = 15
+  let totalNotas = 3
+
+🧠 TIPOS DE DADOS EM JAVASCRIPT
+
+Tipos primitivos:
+- number (inclui Infinity e NaN)
+- string
+- boolean
+- undefined
+- null
+- symbol
+- bigint
+
+Tipos não primitivos:
+- object
+- array (é um tipo de object)
+
+🔍 DESCOBRINDO O TIPO DE UMA VARIÁVEL
+- Usa-se o comando typeof
+
+Exemplos:
+  typeof 5        // "number"
+  typeof "JS"     // "string"
+  typeof true     // "boolean"
+  typeof null     // "object" (comportamento histórico do JS)
