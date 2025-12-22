@@ -1,1 +1,115 @@
--- TRATAMENTO DE DADOS --
+-- TRATAMENTO DE DADOS EM JAVASCRIPT --
+
+• Tipos de dados
+JavaScript trabalha, entre outros, com os tipos:
+- number (números)
+- string (textos)
+
+--------------------------------------------------
+
+• Concatenação e adição
+O sinal de (+) pode ter dois significados:
+
+- (number + number) → adição
+- (string + string) → concatenação
+
+Exemplo:
+var nome = window.prompt("Qual é seu nome?")
+window.alert("É um grande prazer em te conhecer, " + nome + "!")
+
+OBS:
+- window.prompt() sempre retorna uma string.
+- Para somar valores digitados pelo usuário, é necessário converter o tipo de dado.
+
+--------------------------------------------------
+
+• Conversão de String para Número
+
+Formas de conversão:
+- Number.parseInt(n)   → converte para número inteiro
+- Number.parseFloat(n) → converte para número real
+- Number(n)            → o JavaScript decide o tipo (forma mais moderna)
+
+Exemplos:
+
+1)
+var n1 = Number.parseInt(window.prompt("Digite um número: "))
+var n2 = Number.parseInt(window.prompt("Digite outro número: "))
+var soma = n1 + n2
+window.alert("A soma dos valores é " + soma)
+
+2)
+var n1 = Number.parseFloat(window.prompt("Digite um número: "))
+var n2 = Number.parseFloat(window.prompt("Digite outro número: "))
+var soma = n1 + n2
+window.alert("A soma dos valores é " + soma)
+
+3)
+var n1 = Number(window.prompt("Digite um número: "))
+var n2 = Number(window.prompt("Digite outro número: "))
+var soma = n1 + n2
+window.alert("A soma dos valores é " + soma)
+
+--------------------------------------------------
+
+• Conversão de Número para String
+- String(n)
+- n.toString()
+
+--------------------------------------------------
+
+• Formatação de Strings
+
+var s = 'JavaScript'
+
+- 'Eu estou estudando s'
+  → Não faz interpolação
+
+- 'Eu estou estudando ' + s
+  → Concatenação
+
+- `Eu estou estudando ${s}`
+  → Template String (interpolação)
+
+OBS:
+Para usar ${} é obrigatório utilizar crase ( ` ).
+
+Exemplo completo:
+var nome = 'Gustavo'
+var idade = 41
+var nota = 5.5
+
+'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota
+
+`O aluno ${nome} com ${idade} anos tirou a nota ${nota}`
+
+--------------------------------------------------
+
+• Mais formatações de String
+
+var s = 'JavaScript'
+
+- s.length        → quantidade de caracteres
+- s.toUpperCase() → tudo em MAIÚSCULAS
+- s.toLowerCase() → tudo em minúsculas
+
+--------------------------------------------------
+
+• Formatação de Números
+
+var n1 = 1543.5
+
+- n1.toFixed(2)
+  → 1543.50
+
+- n1.toFixed(2).replace('.', ',')
+  → 1543,50
+
+- n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+  → R$ 1.543,50
+
+- n1.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })
+  → US$ 1.543,50
+
+- n1.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' })
+  → € 1.543,50
