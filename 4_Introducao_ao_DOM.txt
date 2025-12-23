@@ -1,0 +1,99 @@
+# Introdução ao DOM (Document Object Model)
+
+## O que é DOM
+- DOM significa Document Object Model (Modelo de Objeto do Documento).
+- Representa a estrutura de um site como uma árvore de objetos que o JavaScript consegue manipular.
+- Permite acessar e modificar elementos da página através de JavaScript.
+
+---
+
+## Árvore DOM
+- O DOM é organizado como uma árvore, começando da raiz (`window`).
+- Objetos importantes dentro de `window`:
+  - `document` → representa todo o HTML.
+  - `location` → informações sobre a URL.
+  - `history` → histórico de navegação.
+
+- Estrutura típica:
+document
+ └── html
+      ├── head
+      │    ├── meta
+      │    └── title
+      └── body
+           ├── h1
+           ├── p
+           │    └── strong
+           └── div
+
+- Resumo hierárquico:
+  - `document` contém `html`
+  - `html` contém `head` e `body`
+  - `head` contém `meta`, `title`
+  - `body` contém elementos visíveis como `h1`, `p`, `div`
+
+---
+
+## Selecionando elementos no DOM
+
+### 1️⃣ Por Tag (`getElementsByTagName()`)
+var p1 = document.getElementsByTagName('p')[1]; // segundo <p>
+p1.innerText = "Está escrito assim";           // altera o texto
+p1.style.color = 'black';                       // altera a cor
+
+- `innerText` → texto sem formatação
+- `innerHTML` → texto com formatação HTML
+
+---
+
+### 2️⃣ Por ID (`getElementById()`)
+var d = document.getElementById("msg");
+d.style.background = 'green';
+d.innerText = "Estou aguardando...";
+
+- IDs são únicos na página
+
+---
+
+### 3️⃣ Por Nome (`getElementsByName()`)
+var d = document.getElementsByName('msg')[0];
+d.innerText = 'Olá!';
+
+- Útil para inputs e elementos de formulário
+
+---
+
+### 4️⃣ Por Classe (`getElementsByClassName()`)
+var itens = document.getElementsByClassName('item');
+itens[0].style.color = 'blue';
+
+- Retorna uma coleção de elementos
+
+---
+
+### 5️⃣ Por Seletor CSS (`querySelector()` / `querySelectorAll()`)
+var d = document.querySelector('div#msg');   // primeiro div com id="msg"
+d.style.background = 'black';
+
+var todos = document.querySelectorAll('p');   // todos os <p> da página
+
+- `querySelector` → primeiro elemento que combina
+- `querySelectorAll` → todos os elementos que combinam
+
+---
+
+## Glossário rápido de métodos e propriedades
+
+| Código JS | O que faz |
+|------------|-----------|
+| `getElementsByTagName('tag')` | Retorna todos os elementos com a tag especificada |
+| `getElementById('id')` | Retorna o único elemento com o ID especificado |
+| `getElementsByName('name')` | Retorna todos os elementos com o atributo `name` especificado |
+| `getElementsByClassName('class')` | Retorna todos os elementos com a classe especificada |
+| `querySelector('seletor')` | Retorna o primeiro elemento que combina com o seletor CSS |
+| `querySelectorAll('seletor')` | Retorna todos os elementos que combinam com o seletor CSS |
+| `innerText` | Retorna ou altera o texto sem formatação |
+| `innerHTML` | Retorna ou altera o conteúdo HTML do elemento |
+| `element.style.propriedade` | Altera o estilo do elemento via JS |
+| `document.body` | Retorna o elemento <body> da página |
+| `window` | Objeto global do navegador, raiz do DOM |
