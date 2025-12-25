@@ -1,0 +1,86 @@
+════════════════════════════════════════
+📌 CONDIÇÕES E ESTRUTURAS EM JAVASCRIPT
+════════════════════════════════════════
+
+▶ SEQUÊNCIAS
+Uma sequência é quando o código é executado linha por linha,
+na ordem em que foi escrito.
+
+Exemplo:
+var n = 3
+n += 2
+window.alert(n)
+
+Nesse caso, o valor final de n será 5.
+
+────────────────────────────────────────
+
+▶ DESVIO CONDICIONAL
+O desvio condicional permite que o programa escolha
+entre dois caminhos, dependendo de uma condição.
+
+Usamos:
+if  → se
+else → se não
+
+Estrutura básica:
+if (condição) {
+    // código executado se a condição for verdadeira
+} else {
+    // código executado se a condição for falsa
+}
+
+────────────────────────────────────────
+
+▶ TIPOS DE CONDIÇÃO
+
+✔ CONDIÇÃO SIMPLES
+Quando só existe o "se".
+
+Exemplo:
+if (vel > 60) {
+    console.log("Ultrapassou o limite de velocidade, multado!")
+}
+
+✔ CONDIÇÃO COMPOSTA
+Quando existe o "se" e o "se não".
+
+Exemplo:
+if (pais == 'Brasil') {
+    console.log("Brasileiro(a)!")
+} else {
+    console.log("Estrangeiro(a)!")
+}
+
+────────────────────────────────────────
+
+▶ USO DO console.log()
+O console.log() é usado para mostrar mensagens no console
+do navegador, muito útil para testar códigos JavaScript.
+
+Exemplo:
+console.log("O console funcionou corretamente!")
+
+────────────────────────────────────────
+
+▶ EXEMPLO PRÁTICO COM FUNÇÃO
+
+function verificar() {
+    var txtv = document.getElementById('txt1')
+    var res = document.getElementById('res')
+    var pais = txtv.value
+
+    res.innerHTML = `Você digitou ${pais}`
+
+    if (pais == 'Brasil') {
+        res.innerHTML += `<p>Você é Brasileiro(a)!</p>`
+    } else {
+        res.innerHTML += `<p>Você é Estrangeiro(a)!</p>`
+    }
+}
+
+Essa função:
+✔ Lê um valor digitado pelo usuário
+✔ Analisa a condição
+✔ Mostra o resultado na tela
+════════════════════════════════════════
