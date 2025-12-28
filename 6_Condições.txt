@@ -1,86 +1,123 @@
-════════════════════════════════════════
-📌 CONDIÇÕES E ESTRUTURAS EM JAVASCRIPT
-════════════════════════════════════════
-
-▶ SEQUÊNCIAS
-Uma sequência é quando o código é executado linha por linha,
-na ordem em que foi escrito.
-
-Exemplo:
-var n = 3
-n += 2
-window.alert(n)
-
-Nesse caso, o valor final de n será 5.
-
-────────────────────────────────────────
-
-▶ DESVIO CONDICIONAL
-O desvio condicional permite que o programa escolha
-entre dois caminhos, dependendo de uma condição.
-
-Usamos:
-if  → se
-else → se não
-
-Estrutura básica:
-if (condição) {
-    // código executado se a condição for verdadeira
-} else {
-    // código executado se a condição for falsa
-}
-
-────────────────────────────────────────
-
-▶ TIPOS DE CONDIÇÃO
-
-✔ CONDIÇÃO SIMPLES
-Quando só existe o "se".
-
-Exemplo:
-if (vel > 60) {
-    console.log("Ultrapassou o limite de velocidade, multado!")
-}
-
-✔ CONDIÇÃO COMPOSTA
-Quando existe o "se" e o "se não".
-
-Exemplo:
-if (pais == 'Brasil') {
-    console.log("Brasileiro(a)!")
-} else {
-    console.log("Estrangeiro(a)!")
-}
-
-────────────────────────────────────────
-
-▶ USO DO console.log()
-O console.log() é usado para mostrar mensagens no console
-do navegador, muito útil para testar códigos JavaScript.
-
-Exemplo:
-console.log("O console funcionou corretamente!")
-
-────────────────────────────────────────
-
-▶ EXEMPLO PRÁTICO COM FUNÇÃO
-
-function verificar() {
-    var txtv = document.getElementById('txt1')
-    var res = document.getElementById('res')
-    var pais = txtv.value
-
-    res.innerHTML = `Você digitou ${pais}`
-
-    if (pais == 'Brasil') {
-        res.innerHTML += `<p>Você é Brasileiro(a)!</p>`
-    } else {
-        res.innerHTML += `<p>Você é Estrangeiro(a)!</p>`
-    }
-}
-
-Essa função:
-✔ Lê um valor digitado pelo usuário
-✔ Analisa a condição
-✔ Mostra o resultado na tela
-════════════════════════════════════════
+╔══════════════════════════════════════════════════════════════╗
+║            CONDIÇÕES E ESTRUTURAS EM JAVASCRIPT              ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ SEQUÊNCIAS                                                 ║
+║ Uma sequência ocorre quando o código é executado linha por   ║
+║ linha, na ordem em que foi escrito.                           ║
+║                                                              ║
+║ Exemplo:                                                     ║
+║ var n = 3                                                    ║
+║ n += 2                                                       ║
+║ window.alert(n)                                              ║
+║                                                              ║
+║ Resultado final: n = 5                                       ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ DESVIO CONDICIONAL                                         ║
+║ Permite que o programa escolha um caminho dependendo de uma  ║
+║ condição.                                                    ║
+║                                                              ║
+║ if  → se                                                     ║
+║ else → se não                                                ║
+║                                                              ║
+║ Estrutura básica:                                            ║
+║ if (condição) {                                              ║
+║     // executa se for verdadeira                             ║
+║ } else {                                                     ║
+║     // executa se for falsa                                  ║
+║ }                                                            ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ TIPOS DE CONDIÇÃO                                          ║
+║                                                              ║
+║ ✔ CONDIÇÃO SIMPLES                                           ║
+║ Quando existe apenas o "se".                                 ║
+║                                                              ║
+║ if (vel > 60) {                                              ║
+║     console.log("Ultrapassou o limite, multado!")             ║
+║ }                                                            ║
+║                                                              ║
+║ ✔ CONDIÇÃO COMPOSTA                                          ║
+║ Quando existe o "se" e o "se não".                            ║
+║                                                              ║
+║ if (pais == 'Brasil') {                                      ║
+║     console.log("Brasileiro(a)!")                             ║
+║ } else {                                                     ║
+║     console.log("Estrangeiro(a)!")                            ║
+║ }                                                            ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ console.log()                                              ║
+║ Usado para exibir mensagens no console do navegador. Muito   ║
+║ útil para testes e depuração de código.                      ║
+║                                                              ║
+║ console.log("O console funcionou corretamente!")             ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ EXEMPLO PRÁTICO COM FUNÇÃO                                 ║
+║                                                              ║
+║ function verificar() {                                       ║
+║     var txtv = document.getElementById('txt1')               ║
+║     var res = document.getElementById('res')                 ║
+║     var pais = txtv.value                                    ║
+║                                                              ║
+║     res.innerHTML = `Você digitou ${pais}`                   ║
+║                                                              ║
+║     if (pais == 'Brasil') {                                  ║
+║         res.innerHTML += `<p>Você é Brasileiro(a)!</p>`      ║
+║     } else {                                                 ║
+║         res.innerHTML += `<p>Você é Estrangeiro(a)!</p>`     ║
+║     }                                                        ║
+║ }                                                            ║
+║                                                              ║
+║ Essa função lê um valor digitado, analisa a condição e       ║
+║ mostra o resultado na tela.                                  ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ CONDIÇÕES ANINHADAS                                        ║
+║ Condições dentro de outras condições.                        ║
+║                                                              ║
+║ if (cond1) {                                                 ║
+║     bloco1                                                   ║
+║ } else if (cond2) {                                          ║
+║     bloco2                                                   ║
+║ } else {                                                     ║
+║     bloco3                                                   ║
+║ }                                                            ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ EXEMPLO COM IDADE (VOTO)                                   ║
+║                                                              ║
+║ var idade = 23                                               ║
+║                                                              ║
+║ if (idade < 16) {                                            ║
+║     console.log('Não vota.')                                 ║
+║ } else if (idade < 18 || idade > 65) {                       ║
+║     console.log('Voto opcional.')                             ║
+║ } else {                                                     ║
+║     console.log('Voto obrigatório.')                         ║
+║ }                                                            ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ CONDIÇÃO MÚLTIPLA (switch)                                 ║
+║ Usada quando há várias opções fixas.                         ║
+║                                                              ║
+║ switch (expressão) {                                         ║
+║     case valor:                                              ║
+║         bloco                                                 ║
+║         break                                                ║
+║     default:                                                 ║
+║         bloco                                                 ║
+║ }                                                            ║
+║                                                              ║
+║ O break evita que o código continue executando os próximos   ║
+║ cases.                                                       ║
+╠══════════════════════════════════════════════════════════════╣
+║ ▶ EXEMPLO COM DIA DA SEMANA                                  ║
+║                                                              ║
+║ var agora = new Date()                                       ║
+║ var diaSem = agora.getDay()                                  ║
+║                                                              ║
+║ switch (diaSem) {                                            ║
+║     case 0: console.log('Domingo'); break                    ║
+║     case 1: console.log('Segunda'); break                    ║
+║     case 2: console.log('Terça'); break                      ║
+║     case 3: console.log('Quarta'); break                     ║
+║     case 4: console.log('Quinta'); break                     ║
+║     case 5: console.log('Sexta'); break                      ║
+║     case 6: console.log('Sábado'); break                     ║
+║ }                                                            ║
+╚══════════════════════════════════════════════════════════════╝
