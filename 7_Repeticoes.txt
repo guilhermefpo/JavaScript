@@ -1,0 +1,35 @@
+==  Repetições ==
+
+-- Estrutras de Repetição 
+
+function comerPizza() {
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+    comerFatia()
+}
+
+== Laço
+
+-- Enquanto for verdade, ele continua fazendo a operação.
+-- Estrutra de repetição com teste lógico no inicio.
+
+while (condição) {
+    bloco
+}
+
+function comerPizza() {
+    while (temFatia()) {
+        comerFatia()
+    }
+}
+
+-- Teste lógico no final.
+
+do {
+    bloco
+} while (condição)
