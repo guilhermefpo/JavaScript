@@ -1,35 +1,86 @@
-==  Repetições ==
+== Estruturas de Repetição ==
 
--- Estrutras de Repetição 
+Estruturas de repetição servem para executar o mesmo bloco de código
+várias vezes, sem precisar repetir o comando manualmente.
 
+Exemplo SEM repetição (não é eficiente):
 function comerPizza() {
     comerFatia()
     comerFatia()
     comerFatia()
     comerFatia()
     comerFatia()
-    comerFatia()
-    comerFatia()
-    comerFatia()
 }
 
-== Laço
+--------------------------------------------------
 
--- Enquanto for verdade, ele continua fazendo a operação.
--- Estrutra de repetição com teste lógico no inicio.
+== Laço while ==
 
+O laço while executa o bloco de código ENQUANTO a condição for verdadeira.
+A condição é testada ANTES de executar o bloco.
+
+Use when: quando você NÃO sabe exatamente quantas vezes o código vai repetir.
+
+Sintaxe:
 while (condição) {
     bloco
 }
 
+Exemplo:
 function comerPizza() {
     while (temFatia()) {
         comerFatia()
     }
 }
 
--- Teste lógico no final.
+--------------------------------------------------
 
+== Laço do...while ==
+
+O do...while é parecido com o while, mas a condição é testada
+APÓS a execução do bloco.
+
+Isso garante que o bloco será executado pelo menos UMA vez.
+
+Sintaxe:
 do {
     bloco
 } while (condição)
+
+--------------------------------------------------
+
+== Repetição com variável de controle ==
+
+Usamos uma variável para controlar o início, o fim e o incremento da repetição.
+
+Exemplo com while:
+var c = 1
+while (c <= 10) {
+    console.log(c)
+    c++
+}
+
+--------------------------------------------------
+
+== Laço for ==
+
+O laço for é usado quando já sabemos:
+- o valor inicial
+- a condição de parada
+- o incremento
+
+Sintaxe:
+for (inicio; teste; incremento) {
+    bloco
+}
+
+Exemplo:
+for (var c = 1; c <= 10; c++) {
+    console.log(c)
+}
+
+Resumo rápido:
+- while → repete enquanto a condição for verdadeira
+- do...while → executa pelo menos uma vez
+- for → ideal quando sabemos o número de repetições
+
