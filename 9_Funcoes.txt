@@ -1,0 +1,67 @@
+========================
+        FUNÇÕES
+========================
+
+• Funções são blocos de código criados para executar uma tarefa específica.
+• Elas só são executadas quando são chamadas.
+• Podem receber parâmetros e retornar um resultado.
+• Ajudam a reutilizar código e organizar melhor o programa.
+
+------------------------
+Estrutura básica
+------------------------
+
+function acao(parametro) {
+    return resultado
+}
+
+acao(5)
+
+------------------------
+Exemplo 1 — Par ou Ímpar
+------------------------
+
+function parimp(n) {
+    if (n % 2 === 0) {
+        return "par"
+    } else {
+        return "impar"
+    }
+}
+
+let res = parimp(11)
+console.log(res)
+
+Resultado:
+impar
+
+------------------------
+Exemplo 2 — Soma
+------------------------
+
+function soma(n1 = 0, n2 = 0) {
+    return n1 + n2
+}
+
+console.log(soma(4, 8))
+
+Resultado:
+12
+
+------------------------
+Observações importantes
+------------------------
+
+• Use === em vez de == (comparação mais segura)
+• return encerra a função e devolve um valor
+• Parâmetros com valor padrão evitam erro "undefined"
+
+------------------------
+Resumo
+------------------------
+
+✔ Função = código reutilizável
+✔ Pode receber parâmetros
+✔ Pode retornar valores
+✔ Executa apenas quando chamada
+
