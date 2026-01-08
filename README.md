@@ -12,6 +12,10 @@ Repositório dedicado à **prática e ao estudo de JavaScript**, servindo como b
 - Curso em Vídeo — JavaScript
 - Professor: **Gustavo Guanabara**
 
+🎓 **Curso de JavaScript para completos iniciantes**
+- Felipe Rocha - Full Stack Club
+- Professor: **Felipe Rocha**
+
 🚀 **Objetivo**
 - Consolidar conhecimentos em JavaScript
 - Criar uma base sólida para projetos futuros
