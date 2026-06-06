@@ -1,0 +1,187 @@
+==================================================
+ANOTAÇÕES SOBRE EVENTOS DOM (JAVASCRIPT)
+==================================================
+
+O que são Eventos DOM?
+---------------------
+Eventos DOM são ações que acontecem em um elemento HTML e que podem ser detectadas pelo JavaScript.
+
+Exemplo:
+Se temos uma <div>, várias coisas podem acontecer com ela, principalmente eventos relacionados ao mouse ou ao teclado.
+
+Eventos de mouse mais comuns:
+- mouseenter → quando o mouse entra no elemento
+- mousemove → quando o mouse se move dentro do elemento
+- mousedown → quando o botão do mouse é pressionado
+- mouseup → quando o botão do mouse é solto
+- click → quando pressiona e solta rapidamente
+- mouseout → quando o mouse sai do elemento
+
+Sempre que um desses eventos acontece, podemos executar um código JavaScript.
+
+
+Funções em JavaScript
+--------------------
+Uma função é um conjunto de comandos que só será executado quando for chamado (por exemplo, por um evento).
+
+Estrutura básica de uma função:
+
+function nomeDaFuncao(parametros) {
+    // bloco de código
+}
+
+Observações:
+- Funções podem ter nome ou serem anônimas.
+- Em eventos inline, normalmente usamos funções com nome.
+- Parâmetros são opcionais.
+
+
+Exemplo 1 — Evento direto no HTML (inline)
+------------------------------------------
+
+<div id="area"
+     onclick="clicar()"
+     onmouseenter="entrar()"
+     onmouseout="sair()">
+     Interaja...
+</div>
+
+<script>
+    var area = document.getElementById('area')
+
+    function clicar() {
+        area.innerText = 'Clicou!'
+        area.style.background = 'red'
+    }
+
+    function entrar() {
+        area.innerText = 'Entrou!'
+    }
+
+    function sair() {
+        area.innerText = 'Saiu!'
+        area.style.background = 'green'
+    }
+</script>
+
+Nesse exemplo:
+- O HTML dispara os eventos
+- O JavaScript contém apenas a lógica
+- É simples, mas menos recomendado em projetos grandes
+
+
+Exemplo 2 — Usando addEventListener (forma recomendada)
+-------------------------------------------------------
+
+<div id="area">
+    Interaja...
+</div>
+
+<script>
+    var area = document.getElementById('area')
+
+    area.addEventListener('click', clicar)
+    area.addEventListener('mouseenter', entrar)
+    area.addEventListener('mouseout', sair)
+
+    function clicar() {
+        area.innerText = 'Clicou!'
+        area.style.background = 'red'
+    }
+
+    function entrar() {
+        area.innerText = 'Entrou!'
+    }
+
+    function sair() {
+        area.innerText = 'Saiu!'
+        area.style.background = 'green'
+    }
+</script>
+
+Vantagens:
+- HTML mais limpo
+- Código organizado
+- Permite vários eventos no mesmo elemento
+
+
+Exemplo 3 — Somando valores com evento click
+--------------------------------------------
+
+<h1>Somando Valores</h1>
+
+<input type="number" id="txtn1">
+<input type="number" id="txtn2">
+<input type="button" value="Somar" onclick="somar()">
+
+<div id="res">Resultado</div>
+
+<script>
+    function somar() {
+        var tn1 = document.getElementById('txtn1')
+        var tn2 = document.querySelector('#txtn2')
+        var res = document.getElementById('res')
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var soma = n1 + n2
+
+        res.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${soma}`
+    }
+</script>
+
+Aqui aprendemos:
+- Capturar valores de inputs
+- Converter texto em número
+- Mostrar resultado na tela usando eventos
+
+
+==================================================
+GLOSSÁRIO JAVASCRIPT
+==================================================
+
+DOM
+→ Representação dos elementos HTML dentro do JavaScript.
+
+document
+→ Objeto que dá acesso ao conteúdo da página HTML.
+
+getElementById('id')
+→ Seleciona um elemento pelo ID.
+
+querySelector('seletor')
+→ Seleciona o primeiro elemento usando CSS.
+
+addEventListener(evento, funcao)
+→ Associa um evento a uma função.
+
+onclick / onmouseenter / onmouseout
+→ Eventos de mouse usados diretamente no HTML.
+
+function nome() {}
+→ Cria uma função.
+
+innerText
+→ Altera ou lê apenas o texto do elemento.
+
+innerHTML
+→ Altera ou lê o conteúdo HTML do elemento.
+
+style.background
+→ Modifica o estilo CSS do elemento.
+
+input.value
+→ Pega o valor digitado em um campo de input.
+
+Number()
+→ Converte texto (string) em número.
+
+var
+→ Declara uma variável (forma mais antiga).
+
+let / const
+→ Formas modernas de declarar variáveis.
+
+==================================================
+FIM DAS ANOTAÇÕES
+==================================================

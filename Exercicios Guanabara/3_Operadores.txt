@@ -1,0 +1,187 @@
+==============================
+        OPERADORES JS
+==============================
+
+-- OPERADORES --
+• Aritméticos
+• Atribuição
+• Relacionais
+• Lógicos
+• Ternário
+
+
+==============================
+   OPERADORES ARITMÉTICOS
+==============================
+
+5 + 2  -> 7    (Adição)
+5 - 2  -> 3    (Subtração)
+5 * 2  -> 10   (Multiplicação)
+5 / 2  -> 2.5  (Divisão)
+5 % 2  -> 1    (Resto da divisão inteira)
+5 ** 2 -> 25   (Potência)
+
+⚠️ CUIDADO COM A ORDEM:
+5 + 3 / 2 = 6.5
+A divisão acontece antes da soma.
+
+➡️ O fato de "não dar erro" NÃO significa que está correto,
+apenas que não existe erro sintático.
+
+Use parênteses quando necessário:
+(5 + 3) / 2 = 4
+
+
+==============================
+   ORDEM DE PRECEDÊNCIA
+==============================
+
+1. ()
+2. **
+3. *  /  %
+4. +  -
+
+Obs: Quando operadores têm a mesma prioridade,
+o JavaScript resolve da esquerda para a direita.
+
+
+==============================
+   ATRIBUIÇÃO SIMPLES
+==============================
+
+var a = 5 + 3        // 8
+var b = a % 5        // 3
+var c = 5 * b ** 2   // 45
+var d = 10 + a / 2   // 14
+var e = 6 * 2 / d    // 0.857...
+var f = b % e + 4 / e
+
+
+==============================
+   AUTO-ATRIBUIÇÃO
+==============================
+
+var n = 3
+
+n = n + 4
+n = n - 5
+n = n * 4
+n = n / 2
+n = n ** 2
+n = n % 5
+
+Quando a variável recebe ela mesma, podemos simplificar:
+
+n += 4
+n -= 5
+n *= 4
+n /= 2
+n **= 2
+n %= 5
+
+
+==============================
+   INCREMENTO / DECREMENTO
+==============================
+
+var x = 5
+
+x++  // incrementa 1
+x--  // decrementa 1
+
+++x  // incrementa e retorna o valor novo
+x++  // retorna o valor antigo e depois incrementa
+
+O mesmo vale para:
+--x  e  x--
+
+No final, ambos deixam a variável com o mesmo valor.
+
+
+==============================
+   OPERADORES RELACIONAIS
+==============================
+
+5 > 2     // true
+7 < 4     // false
+8 >= 8    // true
+9 <= 7    // false
+5 == 5    // true
+4 != 4    // false
+
+
+==============================
+   IDENTIDADE
+==============================
+
+5 == 5     // true
+5 == '5'   // true
+
+⚠️ O operador == NÃO verifica o tipo,
+apenas o valor.
+
+Para comparar valor e tipo, use ===
+
+5 === '5'  // false
+5 === 5    // true
+
+
+==============================
+   OPERADORES LÓGICOS
+==============================
+
+!   -> negação
+&&  -> conjunção (E)
+||  -> disjunção (OU)
+
+
+== NEGAÇÃO ==
+
+!true   -> false
+!false  -> true
+
+
+== CONJUNÇÃO (&&) ==
+
+true  && true   -> true
+true  && false  -> false
+false && true   -> false
+false && false  -> false
+
+
+== DISJUNÇÃO (||) ==
+
+true  || true   -> true
+true  || false  -> true
+false || true   -> true
+false || false  -> false
+
+
+==============================
+   PRECEDÊNCIA LÓGICA
+==============================
+
+1. !
+2. &&
+3. ||
+
+Ordem geral:
+1. Aritméticos
+2. Relacionais
+3. Lógicos
+
+
+==============================
+   OPERADOR TERNÁRIO
+==============================
+
+O operador ternário possui 3 partes:
+teste ? resultadoTrue : resultadoFalse
+
+Exemplo:
+
+media >= 7 ? "Aprovado" : "Reprovado"
+
+Se a condição for verdadeira,
+retorna "Aprovado".
+Caso contrário, retorna "Reprovado".
